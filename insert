@@ -1,0 +1,17 @@
+<?php 
+
+		$connect= mysql_connect('localhost','root','','mith');
+		mysql_query('use mith');
+		$name= $_POST["email"];
+		$pass=$_POST["password"];
+		$query= "insert into users(name,pass) values('$name','$pass');" ;
+		mysql_query($query) or die(mysql_error($connect));
+		mysql_close($connect);
+
+
+
+
+
+
+
+ ?>
